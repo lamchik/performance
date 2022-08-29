@@ -2,11 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Яндекс.Дом</title>
     <link rel="preload" as="font" href="assets/lato.woff2" type="font/woff2" crossorigin="anonymous">
-    <script src="vendors/react-with-dom.js"></script>
+    <script async src="vendors/react-with-dom.js"></script>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -41,22 +40,12 @@
                 <ul class="hero-dashboard__info">
                     <li class="hero-dashboard__item">
                         <div class="hero-dashboard__item-title">Дома</div>
-                        <div class="hero-dashboard__item-details">
-                            +23
-                            <span class="a11y-hidden">°</span>
-                        </div>
+                        <div class="hero-dashboard__item-details">+23<span class="a11y-hidden">°</span></div>
                     </li>
                     <li class="hero-dashboard__item">
                         <div class="hero-dashboard__item-title">За окном</div>
-                        <div class="hero-dashboard__item-details">
-                            +19
-                            <span class="a11y-hidden">°</span>
-
-                            <div
-                                class="hero-dashboard__icon hero-dashboard__icon_rain"
-                                role="img"
-                                aria-label="Дождь"
-                            ></div>
+                        <div class="hero-dashboard__item-details">+19<span class="a11y-hidden">°</span>
+                            <div class="hero-dashboard__icon hero-dashboard__icon_rain" role="img" aria-label="Дождь"></div>
                         </div>
                     </li>
                 </ul>
@@ -89,7 +78,6 @@
 
     <section class="section main__scripts">
         <h2 class="section__title section__title-header">Избранные сценарии</h2>
-
         <ul class="event-grid">
             <li class="event event_slim">
                 <button class="event__button">
@@ -127,10 +115,7 @@
 
     <section class="section main__devices">
         <div class="section__title">
-            <h2 class="section__title-header">
-                Избранные устройства
-            </h2>
-
+            <h2 class="section__title-header">Избранные устройства</h2>
             <select class="section__select">
                 <option value="all" selected>Все</option>
                 <option value="kitchen">Кухня</option>
@@ -138,7 +123,6 @@
                 <option value="lights">Лампочки</option>
                 <option value="cameras">Камеры</option>
             </select>
-
             <ul role="tablist" class="section__tabs">
                 <li role="tab" aria-selected="true" tabindex="0" class="section__tab section__tab_active" id="tab_all" aria-controls="panel_all" data-id="all">Все</li>
                 <li role="tab" aria-selected="false" class="section__tab" id="tab_kitchen" aria-controls="panel_kitchen" data-id="kitchen">Кухня</li>
@@ -147,7 +131,6 @@
                 <li role="tab" aria-selected="false" class="section__tab" id="tab_cameras" aria-controls="panel_cameras" data-id="cameras">Камеры</li>
             </ul>
         </div>
-
         <div role="tabpanel" class="section__panel" aria-hidden="false" id="panel_all" aria-labelledby="tab_all" data-id="all">
             <ul class="section__panel-list">
                 <li class="event">
@@ -201,7 +184,6 @@
                 </li>
             </ul>
         </div>
-
         <div role="tabpanel" class="section__panel section__panel_hidden" aria-hidden="true" id="panel_kitchen" aria-labelledby="tab_kitchen" data-id="kitchen">
             <ul class="section__panel-list">
                 <li class="event">
@@ -220,7 +202,6 @@
                 </li>
             </ul>
         </div>
-
         <div role="tabpanel" class="section__panel section__panel_hidden" aria-hidden="true" id="panel_hall" aria-labelledby="tab_hall" data-id="hall">
             <ul class="section__panel-list">
                 <li class="event">
@@ -303,9 +284,7 @@
         </li>
     </ul>
 
-    <div class="footer__copyright">
-        © 1997–2022 ООО «Яндекс»
-    </div>
+    <div class="footer__copyright">© 1997–2022 ООО «Яндекс»</div>
 </footer>
 
 </body>
