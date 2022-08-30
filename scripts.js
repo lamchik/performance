@@ -77,18 +77,23 @@ function makeTabs() {
     });
 }
 
-const button = document.querySelector('.header__menu')
-let expanded = false;
-const links = document.querySelector('.header__links');
+function makeMenu(node) {
+    let expanded = false;
+    const links = document.querySelector('.header__links');
 
-button.addEventListener('click', () => {
-    expanded = !expanded;
-    button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    links.classList.toggle('header__links_opened', expanded);
-    links.classList.add('header__links-toggled');
-});
+    node.addEventListener('click', () => {
+        expanded = !expanded;
+        node.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        node.querySelector('.header__menu-text').textContent = expanded ? 'Закрыть меню' : 'Открыть меню';
+        links.classList.toggle('header__links_opened', expanded);
+        links.classList.add('header__links-toggled');
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     Array.from(document.querySelectorAll('.main__devices')).forEach(makeTabs);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.querySelectorAll('.header__menu')).forEach(makeMenu);
+});
