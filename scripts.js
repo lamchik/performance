@@ -1,6 +1,4 @@
 let selected = document.querySelector('.section__tab_active').dataset.id;
-const tabs = document.querySelectorAll('.section__tab');
-const list = Array.from(tabs).map(node => node.dataset.id);
 const select = document.querySelector('.section__select');
 
 
@@ -36,6 +34,8 @@ function selectTab(newId) {
 }
 
 function makeTabs() {
+    const tabs = document.querySelectorAll('.section__tab');
+    const list = Array.from(tabs).map(node => node.dataset.id);
     select.addEventListener('input', () => {
         selectTab(select.value);
     });
@@ -78,8 +78,21 @@ function makeTabs() {
     });
 }
 
+function makeMenu(node) {
+    let expanded = false;
+    const links = document.querySelector('.header__links');
+
+    node.addEventListener('click', () => {
+        expanded = !expanded;
+        node.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        // node.querySelector('.header__menu-text').textContent = expanded ? 'Закрыть меню' : 'Открыть меню';
+        links.classList.toggle('header__links_opened', expanded);
+        links.classList.add('header__links-toggled');
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.querySelectorAll('.header__menu')).forEach(makeMenu);
     Array.from(document.querySelectorAll('.main__devices')).forEach(makeTabs);
 });
 
