@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="styles.css?ver=<?php echo VERSION; ?>">
     </head>
     <body>
+        <script defer src="scripts.js"></script>
         <header class="header">
             <a href="/" class="header__logo" aria-label="Яндекс.Дом"></a>
             <button class="header__menu" aria-expanded="false"><span class="header__menu-text a11y-hidden">Открыть меню</span></button>
@@ -42,21 +43,25 @@
                     <ul class="hero-dashboard__schedule">
                         <li class="event">
                             <button class="event__button">
-                                <span class="event__icon event__icon_temp" role="img" aria-label="Температура"></span>
+                                <img loading="lazy" src="assets/icon_temperature.svg" class="event__icon" alt="temp"/>
+<!--                                <span class="event__icon event__icon_temp" role="img" aria-label="Температура"></span>-->
                                 <h4 class="event__title">Philips Cooler</h4>
                                 <span class="event__subtitle">Начнет охлаждать в 16:30</span>
                             </button>
                         </li>
                         <li class="event">
                             <button class="event__button">
-                                <span class="event__icon event__icon_light" role="img" aria-label="Освещение"></span>
+                                <img loading="lazy" src="assets/icon_sun.svg" class="event__icon" alt="sun"/>
+<!--                                <span class="event__icon event__icon_light" role="img" aria-label="Освещение"></span>-->
                                 <h4 class="event__title">Xiaomi Yeelight LED Smart Bulb</h4>
                                 <span class="event__subtitle">Включится в 17:00</span>
                             </button>
                         </li>
                         <li class="event">
                             <button class="event__button">
-                                <span class="event__icon event__icon_light" role="img" aria-label="Освещение"></span>
+<!--                                <span class="event__icon event__icon_light" role="img" aria-label="Освещение"></span>-->
+                                <img loading="lazy" src="assets/icon_sun.svg" class="event__icon" alt="sun"/>
+
                                 <h4 class="event__title">Xiaomi Yeelight LED Smart Bulb</h4>
                                 <span class="event__subtitle">Включится в 17:00</span>
                             </button>
@@ -261,6 +266,5 @@
             </ul>
             <div class="footer__copyright">© 1997–2022 ООО «Яндекс»</div>
         </footer>
-        <script defer src="scripts.js"></script>
     </body>
 </html>
