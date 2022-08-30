@@ -447,17 +447,17 @@ html, body {
     background-size: contain;
 }
 
-.event__icon_temp {
-    background-image: url(assets/icon_temperature.svg);
-}
+/*.event__icon_temp {*/
+/*    background-image: url(assets/icon_temperature.svg);*/
+/*}*/
 
 .event__icon_temp2 {
     background-image: url(assets/icon_temperature_2.svg);
 }
 
-.event__icon_light {
-    background-image: url(assets/icon_sun.svg);
-}
+/*.event__icon_light {*/
+/*    background-image: url(assets/icon_sun.svg);*/
+/*}*/
 
 .event__icon_light2 {
     background-image: url(assets/icon_sun_2.svg);
