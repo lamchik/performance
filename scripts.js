@@ -91,8 +91,6 @@ function makeMenu() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    makeMenu()
-    makeTabs()
-});
+makeMenu()
+makeTabs()
 
