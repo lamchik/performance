@@ -214,20 +214,20 @@ html, body {
 
 .section__select {
     display: none;
-    margin: 0 0 0 auto;
-    padding: 0.4375rem 1.9375rem .5rem 1rem;
-    border: none;
-    border-radius: 1.25rem;
-    font-size: 0.8125rem;
-    font-family: inherit;
-    font-weight: bold;
-    background: no-repeat calc(100% - 1rem) 50% #FFD93E url(assets/arrow-down.svg);
-    appearance: none;
 }
 
 @media (max-width: 768px) {
     .section__select {
         display: block;
+        margin: 0 0 0 auto;
+        padding: 0.4375rem 1.9375rem .5rem 1rem;
+        border: none;
+        border-radius: 1.25rem;
+        font-size: 0.8125rem;
+        font-family: inherit;
+        font-weight: bold;
+        background: no-repeat calc(100% - 1rem) 50% #FFD93E url(assets/arrow-down.svg);
+        appearance: none;
     }
 }
 
@@ -274,7 +274,6 @@ html, body {
     gap: 0.9375rem;
     height: 20.6875rem;
     background: no-repeat 50% 50% url(assets/bg@2x.png);
-    /*background-size: cover;*/
     background-size: 1260px;
     border-radius: 1.25rem;
 }
