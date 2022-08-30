@@ -380,6 +380,10 @@ html, body {
     }
 }
 
+.hero-dashboard__icon_rain {
+    background-image: url(assets/cloud-drizzle.svg);
+}
+
 .hero-dashboard__schedule {
     display: flex;
     flex: 0 0 auto;
@@ -442,6 +446,26 @@ html, body {
     background: no-repeat 50% 50%;
     background-size: contain;
 }
+
+/*.event__icon_temp {*/
+/*    background-image: url(assets/icon_temperature.svg);*/
+/*}*/
+
+/*.event__icon_temp2 {*/
+/*    background-image: url(assets/icon_temperature_2.svg);*/
+/*}*/
+
+/*.event__icon_light {*/
+/*    background-image: url(assets/icon_sun.svg);*/
+/*}*/
+
+/*.event__icon_light2 {*/
+/*    background-image: url(assets/icon_sun_2.svg);*/
+/*}*/
+
+/*.event__icon_schedule {*/
+/*    background-image: url(assets/icon_scheduled.svg);*/
+/*}*/
 
 .event__title {
     margin: 0;
