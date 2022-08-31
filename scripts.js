@@ -1,7 +1,3 @@
-let selected = document.querySelector('.section__tab_active').dataset.id;
-const select = document.querySelector('.section__select');
-
-
 function bind(nodes, event, handler) {
     Array.from(nodes).forEach(node => {
         node.addEventListener(event, handler);
@@ -9,7 +5,6 @@ function bind(nodes, event, handler) {
 }
 
 function selectTab(newId) {
-    selected = newId;
     const oldTab = document.querySelector('.section__tab_active');
     const oldPanel = document.querySelector('.section__panel:not(.section__panel_hidden)');
     const newTab = document.querySelector(`.section__tab[data-id=${newId}]`);
@@ -29,19 +24,21 @@ function selectTab(newId) {
     oldPanel.setAttribute('aria-hidden', 'true');
     newPanel.classList.remove('section__panel_hidden');
     newPanel.setAttribute('aria-hidden', 'false');
-
-    select.value = newId;
 }
 
 function makeTabs() {
+    let selected = document.querySelector('.section__tab_active').dataset.id;
     const tabs = document.querySelectorAll('.section__tab');
     const list = Array.from(tabs).map(node => node.dataset.id);
+    const select = document.querySelector('.section__select');
+
     select.addEventListener('input', () => {
         selectTab(select.value);
     });
 
     bind(tabs, 'click', event => {
         const newId = event.target.dataset.id;
+        select.value = newId
         selectTab(newId);
     });
 
@@ -69,6 +66,7 @@ function makeTabs() {
             index = list.length - 1;
         }
 
+        selected = list[index]
         selectTab(list[index]);
         event.preventDefault();
     });
