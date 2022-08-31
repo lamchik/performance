@@ -51,17 +51,13 @@ function makeTabs() {
         }
 
         let index = list.indexOf(selected);
-        if (event.which === 37) {
-            // left
+        if (event.key === 'ArrowLeft') {
             --index;
-        } else if (event.which === 39) {
-            // right
+        } else if (event.key === 'ArrowRight') {
             ++index;
-        } else if (event.which === 36) {
-            // home
+        } else if (event.key === 'Home') {
             index = 0;
-        } else if (event.which === 35) {
-            // end
+        } else if (event.key === 'End') {
             index = list.length - 1;
         } else {
             return;
@@ -91,6 +87,8 @@ function makeMenu() {
     });
 }
 
-makeMenu()
-makeTabs()
+document.addEventListener('DOMContentLoaded', () => {
+    Array.from(document.querySelectorAll('.main__devices')).forEach(makeTabs);
+    Array.from(document.querySelectorAll('.header__menu')).forEach(makeMenu);
+});
 
