@@ -224,7 +224,7 @@ html, body {
 }
 
 .section__tab {
-    /*flex: 0 0 auto;*/
+    flex: 0 0 auto;
     padding: 0.4375rem 0.9375rem .5rem;
     font-size: 0.8125rem;
     font-weight: bold;
@@ -469,7 +469,7 @@ html, body {
     flex: 0 0 auto;
     align-items: center;
     height: 4rem;
-    /*margin-top: auto;*/
+    margin-top: auto;
     padding: 0 2.5rem;
 }
 
@@ -488,7 +488,7 @@ html, body {
     display: flex;
     align-items: baseline;
     gap: 0.9375rem;
-    /*margin: 0;*/
+    margin: 0;
     padding: 0;
     list-style: none;
 }
